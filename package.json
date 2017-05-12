@@ -1,0 +1,33 @@
+{
+  "name": "website-doobalooo",
+  "version": "1.0.0",
+  "description": "Website for twitch.tv/doobalooo",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/idflores007/website-doobalooo.git"
+  },
+  "author": "Israel Flores <idflorespro@gmail.com> (https://github.com/idflores)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/idflores007/website-doobalooo#readme",
+  "dependencies": {
+    "radium": "^0.18.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "twitch-irc-lite": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "class-to-classname": "^1.0.1",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
