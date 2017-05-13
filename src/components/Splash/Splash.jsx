@@ -20,7 +20,7 @@ export default class Splash extends Component {
         </div>
 
         <div style={style.btnDonate}>
-          <Button />
+          <Button text="Donate"/>
         </div>
 
         <div style={style.container}>

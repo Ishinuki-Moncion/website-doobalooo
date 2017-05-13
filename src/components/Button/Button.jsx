@@ -7,7 +7,7 @@ import style from './styles.radium.es6'
 export default class Button extends Component {
   render() {
     return(
-      <a style={style.btn}>Donate</a>
+      <a style={style.btn}>{this.props.text}</a>
     )
   }
 }
