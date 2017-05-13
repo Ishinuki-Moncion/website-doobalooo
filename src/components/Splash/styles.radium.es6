@@ -26,13 +26,22 @@ module.exports = {
     transform: "scale(1.03)"
   },
 
+  btnDonate: {
+    zIndex: "10",
+    position: "absolute",
+    right: "0px",
+    top: "0px",
+    marginRight: "1.5em",
+    marginTop: "1.5em"
+  },
+
   title: {
     color: "whitesmoke",
     textAlign: "center",
     width: "100%",
     top: "0px",
     margin: "20px auto -10px",
-    fontSize: "15.5em",
+    fontSize: "15.5em"
   },
 
   title_p: {
@@ -63,7 +72,7 @@ module.exports = {
     width: "350px",
     height: "350px",
     marginLeft: "25px",
-    background: "rgba(25, 23, 28, 0.985)",
+    background: "rgba(25, 23, 28, 0.97)",
     borderRadius: "4.5%"
   }
 }

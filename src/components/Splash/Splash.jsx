@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Radium from 'radium'
 
 import TwitchChat from './TwitchChat'
-import style from './styles.radium.jsx'
+import Button from '../Button/Button'
+import style from './styles.radium.es6'
 import bgVideo from './magic-cloth-video.mp4'
 
 @Radium
@@ -16,6 +17,10 @@ export default class Splash extends Component {
             <source src={bgVideo} type="video/mp4">
             </source>
           </video>
+        </div>
+
+        <div style={style.btnDonate}>
+          <Button />
         </div>
 
         <div style={style.container}>

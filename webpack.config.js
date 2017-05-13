@@ -44,6 +44,13 @@ module.exports = {
     publicPath: "/build",
     filename: "app.bundle.js"
   },
+  // to resolve IRC library errors:
+  // Module not found: Error: Can't resolve 'net'
+  // https://github.com/request/request/issues/1529
+  node: {
+    console: false,
+    net: 'empty'
+  },
   plugins: debug ? [] :
   [
     new webpack.optimize.DedupePlugin(),

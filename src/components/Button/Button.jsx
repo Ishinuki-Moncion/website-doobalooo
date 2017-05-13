@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
-import IRC from 'twitch-irc-lite'
 
 import style from './styles.radium.es6'
 
 @Radium
-export default class extends Component {
+export default class Button extends Component {
   render() {
     return(
-      <div style={style.twitchChat}>
-      </div>
+      <a style={style.btn}>Donate</a>
     )
   }
 }
