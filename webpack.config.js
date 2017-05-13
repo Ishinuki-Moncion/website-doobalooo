@@ -35,13 +35,13 @@ module.exports = {
   },
   output:
   {
-    path: __dirname + "/build",
+    path: __dirname + "/build/",
     // it is important, here, to specify a publicPath
     // app.bundle.js will be stored in temp memory, not the actual build folder
     // localhost:8080 is the /doobalooo-website/ folder
     // specifying a publicPath as /build tells webpack-dev-server where in
     // temp memory to serve the files
-    publicPath: "/build",
+    publicPath: "/build/",
     filename: "app.bundle.js"
   },
   // to resolve IRC library errors:
