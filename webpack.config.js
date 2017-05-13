@@ -1,3 +1,5 @@
+// Reference: https://webpack.github.io/docs/configuration.html
+
 var webpack = require('webpack');
 var debug = process.env.NODE_ENV !== "production";
 
@@ -18,6 +20,17 @@ module.exports = {
       test: /\.jsx?$/, // Match both .js and .jsx
       exclude: /(node_modules)/,
       loader: [ "babel-loader", "class-to-classname" ]
+    },
+    {
+      // Format for this loader was taken from:
+      // Handles images, video, animation, etc. assets
+      // https://github.com/michael-ciniawsky/css-loader#assets
+      test: /\.(png|jpg|mp4|ttf)$/,
+      use:
+      [{
+          loader: 'url-loader',
+          options: { limit: 10000 }
+      }] // gets image files and assets
     }]
   },
   output:
