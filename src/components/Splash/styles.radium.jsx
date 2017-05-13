@@ -9,16 +9,19 @@ module.exports = {
   },
 
   background: {
-    poistion: "absolute",
+    position: "relative",
     zIndex: "-20",
-    width: "100%",
-    height: "100%",
-    overflow: "hidden"
+    width: "100vw",
+    height: "100vh",
+    overflow: "hidden",
+    // remember this when adding the "learn more" button!
+    minHeight: "600px"
   },
 
   backgroundVideo: {
-    width: "100%",
-    height: "100%",
+    position: "absolute",
+    // 16:9 aspect ratio; allows image to resize with browser window
+    paddingBottom: "56.25%",
     filter: "blur(3px)",
     transform: "scale(1.03)"
   },
@@ -50,7 +53,9 @@ module.exports = {
   twitchPlayer: {
     width: "525px",
     height: "350px",
-    top: "0px"
+    top: "0px",
+    borderRadius: "3% / 5%",
+    overflow: "hidden"
   },
 
   // TwitchChat Component //
@@ -58,6 +63,7 @@ module.exports = {
     width: "350px",
     height: "350px",
     marginLeft: "25px",
-    background: "blue"
+    background: "rgba(25, 23, 28, 0.985)",
+    borderRadius: "4.5%"
   }
 }
