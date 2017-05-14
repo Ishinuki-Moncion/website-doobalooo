@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'index.html'));
 });
 
+app.get('/chat', (req, res) => {
+  res.json({test: "test"});
+});
+
 app.listen(3000, () => {
   console.log('Server is up and running...');
 });
