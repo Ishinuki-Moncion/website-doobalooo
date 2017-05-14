@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 
-import TwitchChat from './TwitchChat'
+import TwitchChat from './TwitchChat/TwitchChat'
 import Button from '../Button/Button'
 import style from './styles.radium.es6'
 import bgVideo from './magic-cloth-video.mp4'
