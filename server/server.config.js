@@ -9,7 +9,7 @@ var chatResponses = [];
 
 var session = new IRC('oauth:xixcu9v0oa47jihghwpai9imjp8xw4',
                       'TheHunter_bot');
-session.join('jenaurf');
+session.join('hotform');
 session.chatEvents.addListener('message', function(channel, from, message)
   {
     console.log(channel, from, message);
@@ -23,8 +23,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chat', (req, res) => {
-  res.send(chatResponses);
-  chatResponses.length = 0;
+  var messageID = setInterval(() => {
+    if (chatResponses.length > 0) {
+      res.send(chatResponses);
+      chatResponses.length = 0;
+      clearInterval(messageID);
+    };
+  }, 100);
 });
 
 app.listen(3000, () => {
