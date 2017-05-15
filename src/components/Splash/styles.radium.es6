@@ -36,6 +36,7 @@ module.exports = {
   },
 
   title: {
+    pointerEvents: "none",
     color: "whitesmoke",
     textAlign: "center",
     width: "100%",
