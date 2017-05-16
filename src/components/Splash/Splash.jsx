@@ -8,9 +8,29 @@ import bgVideo from './magic-cloth-video.mp4'
 
 @Radium
 export default class Splash extends Component {
+  constructor() {
+    super()
+    let learnMoreHeight = style.learnMoreContainer.height
+    this.state = { learnMoreHeight }
+  }
+
+  componentDidMount() {
+    let newHeight = (this.refs.container.clientHeight -
+                     this.refs.title.clientHeight -
+                     this.refs.media.clientHeight).toString() + "px"
+    style.learnMoreContainer.height = newHeight
+    this.setState({
+      learnMoreHeight: newHeight
+    })
+  }
+
+  onLearnClick() {
+    console.log("clicked!")
+  }
+
   render() {
     return(
-      <div>
+      <div style={style.splashContainer}>
 
         <div style={style.background}>
           <video loop muted autoPlay style={style.backgroundVideo}>
@@ -20,16 +40,16 @@ export default class Splash extends Component {
         </div>
 
         <div style={style.btnDonate}>
-          <Button text="Donate"/>
+          <Button kind="splash" text="Donate"/>
         </div>
 
-        <div style={style.container}>
+        <div ref="container" style={style.container}>
 
-          <div style={style.title}>
+          <div ref="title" style={style.title}>
             <p style={style.title_p}>Doobalooo</p>
           </div>
 
-          <div style={style.mediaContainer}>
+          <div ref="media" style={style.mediaContainer}>
             <div style={style.twitchPlayer}>
               <iframe
                 src="https://player.twitch.tv/?channel=doobalooo"
@@ -43,9 +63,19 @@ export default class Splash extends Component {
             <TwitchChat />
           </div>
 
+          <div style={style.learnMoreContainer}
+            onClick={this.onLearnClick()}>
+            <div style={style.learnMore}>
+              <span style={style.learnMoreText}>
+                Learn About The Doob Crew
+              </span>
+              {/* http://stackoverflow.com/questions/17254339/font-awesome-unicode */}
+              <i style={style.fontAwesome}>&#xf107;</i>
+            </div>
+          </div>
+
         </div>
       </div>
-
     )
   }
 }

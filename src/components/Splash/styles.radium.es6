@@ -14,8 +14,8 @@ module.exports = {
     width: "100vw",
     height: "100vh",
     overflow: "hidden",
-    // remember this when adding the "learn more" button!
-    minHeight: "600px"
+    minHeight: "720px",
+    minWidth: "975px"
   },
 
   backgroundVideo: {
@@ -67,4 +67,47 @@ module.exports = {
     borderRadius: "3% / 5%",
     overflow: "hidden"
   },
+
+  learnMoreContainer: {
+    position: "relative",
+    minHeight: "125px",
+    height: null
+  },
+
+  learnMore: {
+    position: "absolute",
+    zIndex: "0",
+    display: "block",
+    width: "100%",
+    bottom: "0px",
+    marginBottom: "30px",
+    textAlign: "center",
+    color: "rgba(25, 23, 28, 0.3)",
+    cursor: "pointer",
+
+    ':hover': {
+      color: "whitesmoke",
+      textShadow: "0px 0px 3px rgba(255, 255, 255, 0.4)"
+    },
+
+    ':active': {
+      color: "#DDDDDD"
+    }
+  },
+
+  learnMoreText: {
+    fontFamily: "'Architects Daughter'",
+    fontWeight: "bold",
+    fontSize: "1.75em",
+    width: "inherit"
+  },
+
+  fontAwesome: {
+    display: "inline-block",
+    fontFamily: "'FontAwesome'",
+    fontSize: "3em",
+    textRendering: "auto",
+    fontStyle: "normal",
+    width: "inherit"
+  }
 }

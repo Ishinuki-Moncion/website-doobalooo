@@ -7,7 +7,6 @@ module.exports = {
     borderWidth: "2px",
     color: "whitesmoke",
     fontFamily: "'Architects Daughter'",
-    fontSize: "1.75em",
     textDecoration: "none",
     boxShadow: "0px 0px 3px #464646",
     textShadow: "0px 0px 3px #464646",
