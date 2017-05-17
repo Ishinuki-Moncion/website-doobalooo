@@ -28,5 +28,13 @@ module.exports = {
       textShadow: "none",
       cursor: "pointer"
     }
+  },
+
+  splash: {
+    fontSize: "1.75em"
+  },
+
+  normal: {
+    fontSize: "1.25em"
   }
 }

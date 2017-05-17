@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 
-import Button from '../Button/Button'
+import ButtonNav from '../Button/ButtonNav'
 
 @Radium
 export default class NavBar extends Component {
@@ -41,7 +41,7 @@ export default class NavBar extends Component {
         <span style={style.title}>Doobalooo</span>
 
         <div style={style.btn}>
-          <Button kind="normal" text="Donate" />
+          <ButtonNav text="Donate" />
         </div>
 
       </div>

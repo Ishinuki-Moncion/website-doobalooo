@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Radium from 'radium'
 
 import TwitchChat from './TwitchChat/TwitchChat'
-import Button from '../Button/Button'
+import ButtonSplash from '../Button/ButtonSplash'
 import style from './styles.radium.es6'
 import bgVideo from './magic-cloth-video.mp4'
 
@@ -40,7 +40,7 @@ export default class Splash extends Component {
         </div>
 
         <div style={style.btnDonate}>
-          <Button kind="splash" text="Donate"/>
+          <ButtonSplash text="Donate" />
         </div>
 
         <div ref="container" style={style.container}>
