@@ -7,6 +7,7 @@ var IRC = require('twitch-irc-lite');
 const app = Express();
 var chatResponses = [];
 
+// note: NEVER hardcode your OAUTH token
 var session = new IRC(process.env.OAUTH, 'TheHunter_bot');
 session.join('doobalooo');
 session.chatEvents.addListener('message', function(channel, from, message)
